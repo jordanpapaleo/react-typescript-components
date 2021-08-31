@@ -1,0 +1,68 @@
+{
+  "name": "rmm-ocm-component-library",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "license": "",
+  "scripts": {
+    "build:storybook": "build-storybook",
+    "build:test": "yarn pack",
+    "prebuild": "rm -rf dist",
+    "build": "node esbuild.js && yarn tsc",
+    "format": "npx prettier -c ./src -w",
+    "lint:fix": "eslint \"src/*\" --cache --fix",
+    "lint": "eslint \"src/*\"",
+    "prepare": "husky install",
+    "start": "start-storybook -p 6006",
+    "test": "jest",
+    "preversion": "yarn test && yarn build",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "postversion": "git push && git push --tags"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/react": "^6.3.7",
+    "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "auto-changelog": "^2.3.0",
+    "babel-loader": "^8.2.2",
+    "esbuild": "^0.12.24",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "3.4.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.25.1",
+    "husky": ">=6",
+    "jest": "^27.1.0",
+    "lint-staged": ">=10",
+    "prettier": "2.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn lint:fix",
+      "jest --passWithNoTests"
+    ]
+  },
+  "auto-changelog": {
+    "commitLimit": false,
+    "template": "keepachangelog"
+  }
+}
