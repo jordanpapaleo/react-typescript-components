@@ -20,7 +20,7 @@ module.exports = {
   plugins: ['jest', 'react', '@typescript-eslint'],
   rules: {
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error'],
+    // '@typescript-eslint/no-use-before-define': ['error'],
     'prettier/prettier': 'warn',
   },
   settings: {
@@ -28,4 +28,10 @@ module.exports = {
       typescript: {},
     },
   },
+  overrides: [
+    {
+      files: ['*.mdx'],
+      extends: ['plugin:mdx/recommended', 'plugin:mdx/overrides'],
+    },
+  ],
 }
