@@ -1,8 +1,14 @@
 const esbuild = require('esbuild')
+const cssModulesPlugin = require('esbuild-css-modules-plugin')
 
 const defaultConfig = {
   entryPoints: ['src/index.ts'],
   bundle: true,
+  plugins: [
+    cssModulesPlugin({
+      inject: true,
+    }),
+  ],
 }
 
 // Ecma script modules build

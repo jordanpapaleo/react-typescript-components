@@ -1,7 +1,6 @@
 import React from 'react'
 import colors, { colorHash } from './colors'
 import { ColorHashI } from './colors.types'
-// import css from 'styled-jsx/css'
 
 export default {
   title: 'UI/Colors',
@@ -37,17 +36,8 @@ const ColorList = ({ hash, label }: { hash: ColorHashI; label?: string }) => (
         </div>
       ))}
     </dl>
-    {/* <style jsx>{styles}</style> */}
   </div>
 )
-
-// const styles = css`
-//   dl > div {
-//     align-items: center;
-//     display: flex;
-//     margin-bottom: 5px;
-//   }
-// `
 
 export const ColorHash = () => {
   return <ColorList hash={colorHash} />

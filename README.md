@@ -2,8 +2,9 @@
 
 ## Todo
 
-- [ ] how to get css variables into the project
 - [ ] styled-jsx or a css module port
+- [ ] how to get css variables into the project
+- [ ] utf characters/icons
 - [ ] GH pages for story book
 - [ ] setup apple npm stuff
 

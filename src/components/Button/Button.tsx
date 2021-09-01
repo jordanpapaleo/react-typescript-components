@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { DefaultComponentPropI } from 'types/base.types'
+import './button.module.css'
 
 interface PropT extends DefaultComponentPropI {
   onClick?: () => void
