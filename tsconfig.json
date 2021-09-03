@@ -1,5 +1,5 @@
 {
-  "include": ["src/**/*.ts", "src/common/colors/colors.stories.tsx"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "stories", ".storybook", "dist", "*.test.ts"],
   "compilerOptions": {
     "declaration": true,
@@ -12,11 +12,13 @@
     "skipLibCheck": true /* Skip type checking of declaration files. */,
     "strict": true /* Enable all strict type-checking options. */,
     "target": "es2015", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
-      "components/*": ["src/components/*"],
-      "hooks/*": ["src/hooks/*"],
-      "types/*": ["src/types/*"]
+      "common/*": ["common/*"],
+      "shared/*": ["shared/*"],
+      "components/*": ["components/*"],
+      "hooks/*": ["hooks/*"],
+      "types/*": ["types/*"]
     }
   }
 }
