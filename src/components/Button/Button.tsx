@@ -1,7 +1,7 @@
-import './button.module.css'
 import * as React from 'react'
 import classnames from 'classnames'
 
+import styles from './button.module.css'
 import { DefaultComponentPropI } from 'types/base.types'
 import { toQaId } from 'common/formats'
 
@@ -12,18 +12,26 @@ const Button: React.FC<PropI> = (props) => {
     'data-qa-id': dataQaId,
     className,
     style = {},
+    children,
   } = props
   const qaId = toQaId({ parentId: dataQaId, componentId: 'Button' })
 
   return (
-    <div
-      className={classnames('Button-component', className)}
+    <button
+      className={classnames('Button-component', className, styles.button)}
       data-qa-id={qaId}
       style={style}
     >
-      Button
-    </div>
+      {children}
+      <style>{styles1}</style>
+    </button>
   )
 }
+
+const styles1 = `
+  .Button-component {
+    background: yellow;
+  }
+`
 
 export default Button

@@ -1,1 +1,5 @@
-.Button-component {}
+.button {
+  border: 3px solid aqua;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
