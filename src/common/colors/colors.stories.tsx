@@ -22,17 +22,19 @@ const ColorList = ({ hash, label }: { hash: ColorHashI; label?: string }) => (
     {label && <h3>{label}</h3>}
     <dl>
       {Object.entries(hash).map(([name, hex]) => (
-        <div key={name}>
-          {hex instanceof Object ? (
+        <div key={name} style={{ display: 'flex', marginBottom: 5 }}>
+          {hex instanceof Object
+            ? (
             <ColorList hash={hex} label={label ? `${label}-${name}` : name} />
-          ) : (
+              )
+            : (
             <>
               <dd style={{ marginRight: 5 }}>
                 <ColorBlock color={hex} />
               </dd>
-              <dt>{name}</dt>:<dd>{hex}</dd>
+              <dt>{name}</dt>:<dd style={{ marginLeft: 5 }}>{hex}</dd>
             </>
-          )}
+              )}
         </div>
       ))}
     </dl>

@@ -1,13 +1,29 @@
-import * as React from 'react'
-import { DefaultComponentPropI } from 'types/base.types'
 import './button.module.css'
+import * as React from 'react'
+import classnames from 'classnames'
 
-interface PropT extends DefaultComponentPropI {
-  onClick?: () => void
+import { DefaultComponentPropI } from 'types/base.types'
+import { toQaId } from 'common/formats'
+
+export interface PropI extends DefaultComponentPropI {}
+
+const Button: React.FC<PropI> = (props) => {
+  const {
+    'data-qa-id': dataQaId,
+    className,
+    style = {},
+  } = props
+  const qaId = toQaId({ parentId: dataQaId, componentId: 'Button' })
+
+  return (
+    <div
+      className={classnames('Button-component', className)}
+      data-qa-id={qaId}
+      style={style}
+    >
+      Button
+    </div>
+  )
 }
-
-const Button: React.FC<PropT> = ({ children, onClick }) => (
-  <button onClick={onClick}>{children}</button>
-)
 
 export default Button

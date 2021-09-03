@@ -1,14 +1,21 @@
 import * as React from 'react'
 
-export interface StyleI {
-  [selector: string]: string | number
-}
-
 export interface DefaultComponentPropI {
+  /**
+   *  Used to create a unique testable path
+   */
   'data-qa-id'?: string
   children?: React.ReactNode
+  /**
+   * Adds a class name to the root component
+   */
   className?: string
-  style?: StyleI
+  /**
+   * Applies styles to the style tag on the root component
+   */
+  style?: {
+    [selector: string]: string | number
+  }
 }
 
 export interface InputPropT extends DefaultComponentPropI {
@@ -35,7 +42,9 @@ export interface TableHeaderI {
   label: string | React.ReactNode
   sortable?: boolean
   value: string
-  style: StyleI
+  style: {
+    [selector: string]: string | number
+  }
 }
 
 export interface RenderOverrideMapI {

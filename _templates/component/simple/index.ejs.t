@@ -1,5 +1,5 @@
 ---
-to: src/<%= path || actionfolder %>/<%= name %>/<%= name %>.tsx
+to: src/<%= path || actionfolder %>/<%= name %>.tsx
 ---
 import * as React from 'react'
 import classnames from 'classnames'
@@ -24,6 +24,9 @@ const <%= name %>: React.FC<PropI> = (props) => {
       style={style}
     >
       <%= name %>
+      <style>{`
+        .'<%= name %>-component {}
+      `}</style>
     </div>
   )
 }
