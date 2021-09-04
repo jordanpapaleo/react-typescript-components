@@ -1,3 +1,13 @@
+import React from 'react'
+
+export const decorators = [
+  (Story) => (
+    <div className="decorator" style={{ padding: '3em', margin: '3em', border: '1px solid grey', borderRadius: 4 }}>
+      <Story />
+    </div>
+  ),
+]
+
 export const parameters = {
   viewMode: 'docs',
   actions: { argTypesRegex: "^on[A-Z].*" },

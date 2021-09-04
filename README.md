@@ -1,11 +1,15 @@
 # RMM OCM Component Library
 
+## New content
+
+> USE THE NPM COMMANDS
+
 ## Todo
 
 - [x] styled-jsx or a css module port
 - [ ] how to get css variables into the project
-- [ ] utf characters/icons
 - [ ] GH pages for story book
+- [ ] utf characters/icons
 - [ ] setup apple npm stuff
 
 ## TypeScript Notes
