@@ -1,4 +1,5 @@
 _templates
+.editorconfig
 .eslintcache
 .eslintignore
 .eslintrc.js

@@ -1,2 +1,3 @@
-export { default as Button } from 'components/Button'
-export { default as useScroller } from 'hooks/useScroller/useScroller'
+export * as components from 'components'
+export * as hooks from 'hooks'
+export * as common from 'common'

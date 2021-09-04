@@ -1,5 +1,5 @@
 ---
-to: src/<%= path || actionfolder %>/<%= name %>/<%= name %>.tsx
+to: src/components/<%= name %>/<%= name %>.tsx
 ---
 import './<%= h.changeCase.camel(name) %>.module.css'
 import * as React from 'react'
