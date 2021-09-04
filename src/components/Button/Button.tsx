@@ -10,9 +10,9 @@ export interface PropI extends DefaultComponentPropI {}
 const Button: React.FC<PropI> = (props) => {
   const {
     'data-qa-id': dataQaId,
+    children,
     className,
     style = {},
-    children,
   } = props
   const qaId = toQaId({ parentId: dataQaId, componentId: 'Button' })
 

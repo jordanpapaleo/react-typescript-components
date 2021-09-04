@@ -12,11 +12,7 @@ export default {
       },
     },
   },
-  argTypes: {}
+  argTypes: {},
 }
 
-export const ButtonExample = () => (
-  <Button>
-    todo
-  </Button>
-)
+export const ButtonExample = () => <Button>todo</Button>

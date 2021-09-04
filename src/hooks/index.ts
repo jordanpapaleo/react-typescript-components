@@ -1,1 +1,1 @@
-export { default as useScroller } from './useScroller/useScroller'
+export { default as useTheForce } from './useTheForce'

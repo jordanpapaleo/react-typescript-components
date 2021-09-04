@@ -185,7 +185,7 @@ export const colorHash: ColorHashI = Object.freeze({
 })
 
 // Color use
-const colors: {
+export const colors: {
   brandPrimary: string
   brandPrimary30: string
   background: string
@@ -211,7 +211,7 @@ const colors: {
   notifications: NotificationColorI
   status: StatusColorI
   text: TextColorI
-} = {
+} = Object.freeze({
   brandPrimary,
   brandPrimary30,
   background,
@@ -235,6 +235,4 @@ const colors: {
   notifications,
   status,
   text,
-}
-
-export default colors
+})

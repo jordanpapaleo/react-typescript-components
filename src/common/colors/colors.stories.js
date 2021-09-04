@@ -1,5 +1,5 @@
 import React from 'react'
-import colors, { colorHash } from './colors'
+import { colors, colorHash } from './index'
 import { ColorHashI } from './colors.types'
 
 export default {
@@ -17,7 +17,7 @@ const ColorBlock = ({ color }: { color: string }) => (
   />
 )
 
-const ColorList = ({ hash, label }: { hash: ColorHashI; label?: string }) => (
+const ColorList = ({ hash, label }: { hash: ColorHashI, label?: string }) => (
   <div>
     {label && <h3>{label}</h3>}
     <dl>
