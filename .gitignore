@@ -1,3 +1,5 @@
-node_modules
-dist
 .eslintcache
+*.tgz
+dist
+node_modules
+package
