@@ -3,7 +3,7 @@ import * as index from './index'
 console.log(index)
 
 export default {
-  title: 'Intro/Tests',
+  title: 'Testing/Components',
   parameters: {
     docs: {
       description: {
@@ -14,4 +14,4 @@ export default {
   argTypes: {},
 }
 
-export const Imports = () => <div>todo</div>
+export const Import = () => <div>todo</div>

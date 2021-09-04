@@ -3,7 +3,7 @@ import Button from './Button'
 import notes from './button.md'
 
 export default {
-  title: 'components/Button',
+  title: 'Components/Button',
   component: Button,
   parameters: {
     docs: {
