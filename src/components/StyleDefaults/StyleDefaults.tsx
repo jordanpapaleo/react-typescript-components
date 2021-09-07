@@ -1,9 +1,9 @@
 import * as React from 'react'
 import classnames from 'classnames'
 
-import { colors, typography } from 'common'
-import { DefaultComponentPropI } from 'types/base.types'
-import { toQaId } from 'common/formats'
+import { colors, typography } from '../../common'
+import { DefaultComponentPropI } from '../../types/base.types'
+import { toQaId } from '../../common/formats'
 
 export interface PropI extends DefaultComponentPropI {}
 

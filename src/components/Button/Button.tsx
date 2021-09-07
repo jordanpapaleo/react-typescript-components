@@ -2,8 +2,8 @@ import * as React from 'react'
 import classnames from 'classnames'
 
 import styles from './button.module.css'
-import { DefaultComponentPropI } from 'types/base.types'
-import { toQaId } from 'common/formats'
+import { DefaultComponentPropI } from '../../types/base.types'
+import { toQaId } from '../../common/formats'
 
 export interface PropI extends DefaultComponentPropI {}
 
