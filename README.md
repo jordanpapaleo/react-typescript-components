@@ -26,8 +26,9 @@ These commands will scaffold out all of the needed folders and add their imports
 
 - [x] styled-jsx or a css module port
 - [x] yarn pack --out rmm-ocm-package.tgz
-- [ ] how to get css variables into the project
 - [ ] GH pages for story book
+
+- [ ] how to get css variables into the project
 - [ ] utf characters/icons
 - [ ] setup apple npm stuff
 

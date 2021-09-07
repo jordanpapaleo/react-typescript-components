@@ -1,3 +1,5 @@
+Style defaults need to be imported and applied where ever global styles are set.
+
 Adds basic styles and the following css variables
 
 ```

@@ -1,4 +1,3 @@
-import './styleDefaults.module.css'
 import * as React from 'react'
 import classnames from 'classnames'
 
@@ -21,12 +20,16 @@ const StyleDefaults: React.FC<PropI> = (props) => {
       data-qa-id={qaId}
       style={{ height: 0, position: 'absolute' }}
     >
-      <style>{styles}</style>
+      <CssVariables />
+      <BaseStyles />
     </div>
   )
 }
 
-const styles = `
+export const CssVariables: React.FC = () => <style>{cssVariables}</style>
+export const BaseStyles: React.FC = () => <style>{baseStyles}</style>
+
+const cssVariables = `
 :root {
   --animDuration: 0.3s;
   --animEase: ease-out;
@@ -99,14 +102,15 @@ const styles = `
 
   --ff-text: "SF Pro Text", sans-serif;
   --ff-display: "SF Pro Display", sans-serif;
-
-  /* Spacing */
+    /* Spacing */
   --form-horizontal-spacing: 15px;
   --form-vertical-spacing: 18px;
   --content-horizontal-spacing: 20px;
   --content-vertical-spacing: 24px;
 }
+`
 
+const baseStyles = `
 * {
   color: inherit;
   font-family: inherit;

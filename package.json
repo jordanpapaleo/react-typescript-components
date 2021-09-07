@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "license": "",
   "scripts": {
-    "build:sb": "build-storybook",
+    "build:sb": "rm -rf docs && build-storybook -o docs",
     "build:pack": "yarn pack --filename rmm-ocm-package.tgz; tar -xzf rmm-ocm-package.tgz; rm rmm-ocm-package.tgz",
     "build:test": "yarn build; yarn build:package",
     "build": "yarn test && node esbuild.js",
