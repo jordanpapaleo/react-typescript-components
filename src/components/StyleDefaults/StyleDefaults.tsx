@@ -4,6 +4,8 @@ import classnames from 'classnames'
 import { colors, typography } from '../../common'
 import { DefaultComponentPropI } from '../../types/base.types'
 import { toQaId } from '../../common/formats'
+import MarcomFonts from './MarcomFonts'
+import RmmFonts from './RmmFonts'
 
 export interface PropI extends DefaultComponentPropI {}
 
@@ -21,6 +23,8 @@ const StyleDefaults: React.FC<PropI> = (props) => {
       style={{ height: 0, position: 'absolute' }}
     >
       <CssVariables />
+      <MarcomFonts />
+      <RmmFonts />
       <BaseStyles />
     </div>
   )
