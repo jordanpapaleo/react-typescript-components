@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Portrait</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Portrait" fill="#888888">
+            <path d="M20,2.7826087 L20,16 L12.4137931,16 L12.4137931,2.7826087 L20,2.7826087 Z M19.3103448,3.47826087 L13.1034483,3.47826087 L13.1034483,15.3043478 L19.3103448,15.3043478 L19.3103448,3.47826087 Z M17.2413793,1.58095759e-13 L17.2413793,2.08695652 L16.5517241,2.08695652 L16.5517241,0.695652174 L0.689655172,0.695652174 L0.689,12.521 L11.7241379,12.5217391 L11.7241379,13.2173913 L5.66657832e-13,13.2173913 L-6.25277607e-13,1.58095759e-13 L17.2413793,1.58095759e-13 Z" id="Portrait"></path>
+        </g>
+    </g>
+</svg>
