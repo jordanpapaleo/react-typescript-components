@@ -1,12 +1,12 @@
 ---
 to: src/components/<%= name %>/<%= name %>.tsx
 ---
-import './<%= h.changeCase.camel(name) %>.module.css'
 import * as React from 'react'
 import classnames from 'classnames'
 
 import { DefaultComponentPropI } from '../../types/base.types'
 import { toQaId } from '../../common/formats'
+import styles from './<%= h.changeCase.camel(name) %>.module.css'
 
 export interface PropI extends DefaultComponentPropI {}
 

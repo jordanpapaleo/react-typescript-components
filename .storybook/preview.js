@@ -1,8 +1,10 @@
 import React from 'react'
+import { StyleDefaults } from '../src/components'
 
 export const decorators = [
   (Story) => (
     <div className="decorator">
+      <StyleDefaults />
       <Story />
     </div>
   ),

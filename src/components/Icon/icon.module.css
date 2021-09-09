@@ -1,0 +1,37 @@
+.iconComponent {
+  display: inline;
+  font-size: var(--fs-17);
+  font-style: normal;
+  line-height: 1;
+}
+
+.iconComponent.active {
+  --icon-color: var(--black);
+}
+
+.color {
+  color: var(--icon-color);
+}
+
+.backgroundColor {
+  background-color: var(--icon-color);
+}
+
+.color::before {
+  color: var(--icon-color);
+}
+
+.content::before {
+  content: var(--icon-content);
+  color: var(--icon-color);
+}
+
+.mask {
+  display: inline-block;
+  -webkit-mask: var(--icon-mask-url) no-repeat center / contain;
+  mask: var(--icon-mask-url) no-repeat center / contain;
+}
+
+.marcom {
+  font-family: 'Apple Icons';
+}
