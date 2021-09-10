@@ -1,13 +1,13 @@
 const esbuild = require('esbuild')
 const cssModulesPlugin = require('esbuild-css-modules-plugin')
+const svgrPlugin = require('esbuild-plugin-svgr')
 
 const defaultConfig = {
   entryPoints: ['src/index.ts'],
   bundle: true,
   plugins: [
-    cssModulesPlugin({
-      inject: true,
-    }),
+    svgrPlugin({ ref: true, memo: true }),
+    cssModulesPlugin({ inject: true }),
   ],
 }
 
