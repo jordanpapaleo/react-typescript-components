@@ -5,57 +5,50 @@ import InlineSVG from 'react-inlinesvg'
 
 import { colors, toQaId } from '../../common'
 import { DefaultComponentPropI } from '../../types/base.types'
-import { MARCOM, RMM, IMAGES } from './icons'
+import { IMAGES, MARCOM_ARR, RMM_ARR, RMM_ARR_T, MARCOM_ARR_T } from './icons'
 
-const allFonts = { ...MARCOM, ...RMM }
-
-export type FontsT = keyof typeof allFonts
 export type ImagesT = keyof typeof IMAGES
 
 export interface PropI extends DefaultComponentPropI {
-  active?: boolean,
   color?: string,
   image?: ImagesT,
   mask?: ImagesT,
   svg?: ImagesT,
-  type?: FontsT,
+  type?: RMM_ARR_T | MARCOM_ARR_T,
 }
 
-interface TypeIconPropI extends PropI { type: FontsT }
+interface TypeIconPropI extends PropI { type: RMM_ARR_T | MARCOM_ARR_T }
 interface MaskIconPropI extends PropI { mask: ImagesT }
 interface ImageIconPropI extends PropI { src: string }
 
-const marcomFontNames = Object.keys(MARCOM)
-const rmmFontNames = Object.keys(RMM)
-
 const ICON_COLOR = '--icon-color'
-const ICON_CONTENT = '--icon-content'
 const ICON_MASK_URL = '--icon-mask-url'
 
 export const MarcomFontIcon: React.FC<TypeIconPropI> = ({
   'data-qa-id': qaId,
   className,
-  color,
+  color = colors.icons,
   style = {},
   type,
   ...otherProps
-}) => (
-  <i
-    className={classnames(className, styles.marcom)}
-    data-qa-id={qaId}
-    style={{
-      ...style,
-      [ICON_COLOR as any]: color,
-      [ICON_CONTENT as any]: type,
-    }}
-    {...otherProps}
-  />
-)
+}) => {
+  return (
+    <i
+      className={classnames(className, styles.color, `marcom-${type}`)}
+      data-qa-id={qaId}
+      style={{
+        ...style,
+        [ICON_COLOR as any]: color,
+      }}
+      {...otherProps}
+    />
+  )
+}
 
 export const RmmFontIcon: React.FC<TypeIconPropI> = ({
   'data-qa-id': qaId,
   className,
-  color,
+  color = colors.icons,
   style = {},
   type,
   ...otherProps
@@ -133,7 +126,6 @@ export const ImageIcon: React.FC<ImageIconPropI> = ({
 const Icon: React.FC<PropI> = (props) => {
   const {
     'data-qa-id': dataQaId,
-    active,
     className,
     image,
     mask,
@@ -147,26 +139,25 @@ const Icon: React.FC<PropI> = (props) => {
   } = props
 
   const qaId = toQaId({ parentId: dataQaId, componentId: 'Icon' })
-  const classname = classnames('Icon-component', className, styles.iconComponent, { active })
+  const classname = classnames('Icon-component', className, styles.iconComponent)
 
   if (type) {
-    const isRmmFont = rmmFontNames.includes(type)
-    const isMarcomFont = marcomFontNames.includes(type)
+    const isRmmFont = RMM_ARR.includes(type)
+    // @ts-ignore
+    const isMarcomFont = MARCOM_ARR.includes(type)
 
     if (isMarcomFont) {
       return <MarcomFontIcon
         className={classname}
         data-qa-id={qaId}
-        // @ts-ignore
-        type={MARCOM[type]}
+        type={type}
         {...otherProps}
       />
     } else if (isRmmFont) {
       return <RmmFontIcon
         className={classname}
         data-qa-id={qaId}
-        // @ts-ignore
-        type={RMM[type]}
+        type={type}
         {...otherProps}
       />
     }

@@ -30,8 +30,8 @@ const StyleDefaults: React.FC<PropI> = (props) => {
   )
 }
 
-export const CssVariables: React.FC = () => <style>{cssVariables}</style>
-export const BaseStyles: React.FC = () => <style>{baseStyles}</style>
+export const CssVariables: React.FC = () => <style className="CssVariables-component">{cssVariables}</style>
+export const BaseStyles: React.FC = () => <style className="BaseStyles-component">{baseStyles}</style>
 
 const cssVariables = `
 :root {

@@ -18,7 +18,7 @@
     "new:hook": "hygen lib hook && npx prettier -c ./src/hooks/index.ts -w",
     "prebuild": "yarn clean",
     "prepare": "husky install",
-    "start": "start-storybook -p 6006 -s ./assets",
+    "start": "NODE_ENV=development start-storybook -p 6006 -s ./assets",
     "test": "yarn lint && yarn types && jest",
     "types": "tsc",
     "preversion": "yarn test && yarn build",

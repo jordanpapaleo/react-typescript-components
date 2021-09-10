@@ -1,18 +1,12 @@
 import React from 'react'
 import Icon from './Icon'
 import notes from './icon.md'
-import { MARCOM, RMM, IMAGES } from './icons'
+import { IMAGES, RMM_ARR, MARCOM_ARR } from './icons'
 
 export default {
   title: 'Components/Icon',
   component: Icon,
-  parameters: {
-    docs: {
-      description: {
-        component: notes,
-      },
-    },
-  },
+  parameters: { docs: { description: { component: notes } } },
   argTypes: {},
 }
 
@@ -24,21 +18,21 @@ export const Docs = () => <div />
 
 export const MarcomFonts = () => (
   <div>
-    <Icon type="clock" />
-    <Icon type="clock" color="red" />
-    <Icon type="clock" color="blue" />
-    <Icon type="clock" color="hotpink" style={{ backgroundColor: 'black' }} />
-    <Icon type="clock" style={{ border: '1px solid black', padding: 3 }} />
+    <Icon type="apple" />
+    <Icon type="apple" color="red" />
+    <Icon type="apple" active />
+    <Icon type="apple" color="hotpink" style={{ backgroundColor: 'black' }} />
+    <Icon type="apple" style={{ border: '1px solid black', padding: 3 }} />
 
     <hr />
 
     <dl style={sharedDlStyles}>
-      {Object.keys(MARCOM).map((key) => (
-        <div key={key} style={sharedGridStyles}>
+      {MARCOM_ARR.map((type) => (
+        <div key={type} style={sharedGridStyles}>
           <dd>
-            <Icon type={key} />
+            <Icon type={type} />
           </dd>
-          <dt>{key}</dt>
+          <dt>{type}</dt>
         </div>
       ))}
     </dl>
@@ -52,19 +46,19 @@ export const RmmFonts = () => (
     <Icon type="avatar" color="red" />
     <Icon type="avatar" color="blue" />
     <Icon type="avatar" color="hotpink" style={{ backgroundColor: 'black' }} />
-    <Icon type="avatar" style={{ border: '1px solid black', padding: 3 }} />
+    <Icon type="avatar" style={{ border: '1px solid black', borderRadius: '50%', padding: 5, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }} />
 
     <hr />
 
     <h4>Keys</h4>
 
     <dl style={sharedDlStyles}>
-      {Object.keys(RMM).map((key) => (
-        <div key={key} style={sharedGridStyles}>
+      {RMM_ARR.map((type) => (
+        <div key={type} style={sharedGridStyles}>
           <dd>
-            <Icon type={key} color="blue" />
+            <Icon type={type} />
           </dd>
-          <dt>{key}</dt>
+          <dt>{type}</dt>
         </div>
       ))}
     </dl>
@@ -84,7 +78,7 @@ export const ImageMasks = () => (
       {Object.keys(IMAGES).map((key) => (
         <div key={key} style={sharedGridStyles}>
           <dd>
-            <Icon mask={key} style={sharedIconStyles} color="red" />
+            <Icon mask={key} style={sharedIconStyles} />
           </dd>
           <dt>{key}</dt>
         </div>
@@ -97,7 +91,7 @@ export const SvgMarkup = () => (
   <div>
     <p>This renders the svg DOM markup into the page from the file.  This is not a cached image.</p>
 
-    <Icon svg="demodevices" />
+    <Icon svg="demodevices" color="hotpink" />
 
     <hr />
 
@@ -105,7 +99,7 @@ export const SvgMarkup = () => (
       {Object.keys(IMAGES).map((key) => (
         <div key={key} style={sharedGridStyles}>
           <dd>
-            <Icon svg={key} style={sharedIconStyles} color="hotpink" />
+            <Icon svg={key} style={sharedIconStyles} />
           </dd>
           <dt>{key}</dt>
         </div>
