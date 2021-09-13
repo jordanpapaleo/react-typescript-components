@@ -67,8 +67,8 @@ export const RmmFonts = () => (
 
 export const ImageMasks = () => (
   <div>
+    <h2>You have to explicitly use the style tag to set the width and height</h2>
     <p>Uses the type property and renders the image using the </p>
-    <p>You have to explicitly use the style tag to set the size of these</p>
     <Icon mask="daily" color="red" style={sharedIconStyles} />
     <Icon mask="daily" color="orange" style={sharedIconStyles} />
 

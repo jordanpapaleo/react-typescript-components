@@ -1,8 +1,6 @@
 {
   "include": [
     "src/**/*.ts",
-    "src/components/StyleDefaults/MarcomFonts.tsx",
-    "src/components/StyleDefaults/RmmFonts.tsx"
   ],
   "exclude": ["node_modules", "stories", ".storybook", "dist", "*.test.ts"],
   "compilerOptions": {
