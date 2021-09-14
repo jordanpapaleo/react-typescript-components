@@ -1,17 +1,12 @@
-// export const eot = require('../../assets/fonts/rmm-icons/rmm-icons.eot')
-// export const ttf = require('../../assets/fonts/rmm-icons/rmm-icons.ttf')
-export const woff = require('../../assets/fonts/rmm-icons/rmm-icons.woff')
-
-// src: url('${eot}') format('embedded-opentype');
-// url('${ttf}') format('truetype')
-
 export const styles = `
 @font-face {
   font-family: 'rmm-icons';
   font-style: normal;
   font-weight: 400;
-  src: local('☺'),
-    url('${woff}') format('woff')
+  src:
+    url('/fonts/rmm-icons/rmm-icons.eot') format('embedded-opentype'),
+    url('/fonts/rmm-icons/rmm-icons.ttf') format('truetype'),
+    url('/fonts/rmm-icons/rmm-icons.woff') format('woff')
   ;
 }
 

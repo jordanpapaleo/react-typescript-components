@@ -2,11 +2,10 @@
   font-family: 'rmm-icons';
   font-style: normal;
   font-weight: 400;
-  /* src: url('../../assets/fonts/rmm-icons/rmm-icons.eot') format('embedded-opentype'); */
   src:
-    /* local('☺'), */
-    url('../../assets/fonts/rmm-icons/rmm-icons.woff') format('woff'),
-    /* url('../../assets/fonts/rmm-icons/rmm-icons.ttf') format('truetype') */
+    local('rmm-icons'),
+    url(./rmm-icons/rmm-icons.woff) format('woff'),
+    url(./rmm-icons/rmm-icons.ttf) format('truetype')
   ;
 }
 

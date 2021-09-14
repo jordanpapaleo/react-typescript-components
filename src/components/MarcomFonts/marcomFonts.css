@@ -2,11 +2,10 @@
   font-family: 'Apple Icons';
   font-style: normal;
   font-weight: 400;
-  /* src: url('../../assets/fonts/apple-icons/v1/appleicons_text.eot') format('embedded-opentype'); */
   src:
-    /* local('☺'), */
-    url('../../assets/fonts/apple-icons/v1/appleicons_text.woff') format('woff'),
-    url('../../assets/fonts/apple-icons/v1/appleicons_text.ttf') format('truetype')
+    local('Apple Icons'),
+    url(./apple-icons/v1/appleicons_text.woff) format('woff'),
+    url(./apple-icons/v1/appleicons_text.ttf) format('truetype')
   ;
 }
 

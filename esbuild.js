@@ -16,7 +16,7 @@ const defaultConfig = {
     cssModulesPlugin({ inject: true }),
   ],
   loader: {
-    '.eot': 'dataurl',
+    // '.eot': 'dataurl',
     '.png': 'dataurl',
     '.svg': 'dataurl',
     '.ttf': 'dataurl',
@@ -32,6 +32,9 @@ const defaultConfig = {
   //   '.woff2': 'file',
   // },
 }
+
+// defaultConfig.loader['.woff'] = 'file'
+// defaultConfig.loader['.ttf'] = 'file'
 
 // Ecma script modules build
 esbuild.build({

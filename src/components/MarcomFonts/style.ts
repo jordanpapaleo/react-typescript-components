@@ -1,17 +1,11 @@
-// export const eot = require('../../assets/fonts/apple-icons/v1/appleicons_text.eot')
-// export const ttf = require('../../assets/fonts/apple-icons/v1/appleicons_text.ttf')
-export const woff = require('../../assets/fonts/apple-icons/v1/appleicons_text.woff')
-
-// src: url('${eot}') format('embedded-opentype');
-//   url('${ttf}') format('truetype')
-
 export const styles = `
 @font-face {
   font-family: 'Apple Icons';
   font-style: normal;
   font-weight: 400;
   src: local('☺'),
-    url('${woff}') format('woff')
+    url('/fonts/apple-icons/v1/appleicons_text.woff') format('woff'),
+    url('/fonts/apple-icons/v1/appleicons_text.ttf') format('truetype')
   ;
 }
 
