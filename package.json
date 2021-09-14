@@ -10,7 +10,7 @@
     "build:pack": "yarn pack --filename rmm-ocm-package.tgz; tar -xzf rmm-ocm-package.tgz; rm rmm-ocm-package.tgz",
     "build:test": "yarn build; yarn build:package",
     "build0": "yarn test && node esbuild.js",
-    "build": "tsc && node esbuild.js",
+    "build": "tsc --emitDeclarationOnly && node esbuild.js",
     "clean": "rm -rf dist; rm -rf package",
     "lint:fix": "eslint \"src/*\" --cache --fix",
     "lint": "eslint \"src/*\"",
