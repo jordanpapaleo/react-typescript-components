@@ -14,7 +14,7 @@ export interface PropI extends DefaultComponentPropI {
   image?: ImagesT,
   mask?: ImagesT,
   svg?: ImagesT,
-  type?: RMM_ARR_T | MARCOM_ARR_T,
+  type?: MARCOM_ARR_T | RMM_ARR_T,
 }
 
 interface TypeIconPropI extends PropI { type: RMM_ARR_T | MARCOM_ARR_T }
@@ -142,6 +142,7 @@ const Icon: React.FC<PropI> = (props) => {
   const classname = classnames('Icon-component', className, styles.iconComponent)
 
   if (type) {
+    // @ts-ignore
     const isRmmFont = RMM_ARR.includes(type)
     // @ts-ignore
     const isMarcomFont = MARCOM_ARR.includes(type)
@@ -165,7 +166,6 @@ const Icon: React.FC<PropI> = (props) => {
     return <MaskIcon
       className={className}
       data-qa-id={qaId}
-      // @ts-ignore
       mask={IMAGES[mask]}
       {...otherProps}
     />

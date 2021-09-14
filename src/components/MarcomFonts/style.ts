@@ -1,22 +1,24 @@
-import * as React from 'react'
+// export const eot = require('../../assets/fonts/apple-icons/v1/appleicons_text.eot')
+// export const ttf = require('../../assets/fonts/apple-icons/v1/appleicons_text.ttf')
+export const woff = require('../../assets/fonts/apple-icons/v1/appleicons_text.woff')
 
-const MarcomFonts: React.FC = () => <style className="MarcomFonts-component">{styles}</style>
+// src: url('${eot}') format('embedded-opentype');
+//   url('${ttf}') format('truetype')
 
-export default MarcomFonts
-
-const styles = `
+export const styles = `
 @font-face {
   font-family: 'Apple Icons';
   font-style: normal;
   font-weight: 400;
-  src: url('../../assets/fonts/apple-icons/v1/appleicons_text.eot') format('embedded-opentype');
   src: local('☺'),
-    url('../../assets/fonts/apple-icons/v1/appleicons_text.woff') format('woff'),
-    url('../../assets/fonts/apple-icons/v1/appleicons_text.ttf') format('truetype');
+    url('${woff}') format('woff')
+  ;
 }
 
-[class^="marcom-"]:before,
-[class*=" marcom-"]:before {
+[class^='marcom-']::before,
+[class*=' marcom-']::before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-family: 'Apple Icons';
   font-style: normal;
@@ -26,8 +28,6 @@ const styles = `
   text-decoration: inherit;
   text-transform: none;
   width: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .marcom-apple:before { content: '\uF8FF'; }

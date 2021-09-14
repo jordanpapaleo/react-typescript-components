@@ -4,8 +4,8 @@ import classnames from 'classnames'
 import { colors, typography } from '../../common'
 import { DefaultComponentPropI } from '../../types/base.types'
 import { toQaId } from '../../common/formats'
-import MarcomFonts from './MarcomFonts'
-import RmmFonts from './RmmFonts'
+import MarcomFonts from '../MarcomFonts'
+import RmmFonts from '../RmmFonts'
 
 export interface PropI extends DefaultComponentPropI {}
 

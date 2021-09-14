@@ -1,25 +1,26 @@
-import * as React from 'react'
+// export const eot = require('../../assets/fonts/rmm-icons/rmm-icons.eot')
+// export const ttf = require('../../assets/fonts/rmm-icons/rmm-icons.ttf')
+export const woff = require('../../assets/fonts/rmm-icons/rmm-icons.woff')
 
-const RmmFonts: React.FC = () => <style className="RmmFonts-component">{styles}</style>
+// src: url('${eot}') format('embedded-opentype');
+// url('${ttf}') format('truetype')
 
-export default RmmFonts
-
-const styles = `
+export const styles = `
 @font-face {
   font-family: 'rmm-icons';
   font-style: normal;
   font-weight: 400;
-  src: url('../../assets/fonts/rmm-icons/rmm-icons.eot') format('embedded-opentype');
   src: local('☺'),
-    url('../../assets/fonts/rmm-icons/rmm-icons.woff') format('woff'),
-    url('../../assets/fonts/rmm-icons/rmm-icons.ttf') format('truetype')
+    url('${woff}') format('woff')
   ;
 }
 
-[class^="rmm-"]:before,
-[class*=" rmm-"]:before {
+[class^='rmm-']:before,
+[class*=' rmm-']:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   display: inline-block;
-  font-family: "rmm-icons";
+  font-family: 'rmm-icons';
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -27,8 +28,6 @@ const styles = `
   text-decoration: inherit;
   text-transform: none;
   width: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .rmm-add:before { content: '\\e801'; }
@@ -46,7 +45,7 @@ const styles = `
 .rmm-info:before { content: '\\e80d'; }
 .rmm-landscape:before { content: '\\e80e'; }
 .rmm-layers:before { content: '\\e80f'; }
-.rmm-menu:before { content: '\\f0ca'; }
+.rmm-menu:before { content: '\f0ca'; }
 .rmm-more:before { content: '\\e811'; }
 .rmm-moreoptions:before { content: '\\e812'; }
 .rmm-portrait:before { content: '\\e813'; }

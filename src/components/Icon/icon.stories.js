@@ -20,7 +20,7 @@ export const MarcomFonts = () => (
   <div>
     <Icon type="apple" />
     <Icon type="apple" color="red" />
-    <Icon type="apple" active />
+    <Icon type="apple" />
     <Icon type="apple" color="hotpink" style={{ backgroundColor: 'black' }} />
     <Icon type="apple" style={{ border: '1px solid black', padding: 3 }} />
 
