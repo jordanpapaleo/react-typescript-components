@@ -1,8 +1,10 @@
 import React from 'react'
+import { StyleDefaults } from '../src/components'
 
 export const decorators = [
   (Story) => (
-    <div className="decorator" style={{ padding: '3em', margin: '3em', border: '1px solid grey', borderRadius: 4 }}>
+    <div className="decorator">
+      <StyleDefaults />
       <Story />
     </div>
   ),

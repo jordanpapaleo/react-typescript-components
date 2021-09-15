@@ -1,9 +1,11 @@
 {
-  "include": ["src/**/*.ts"],
+  "include": [
+    "src/**/*.ts",
+  ],
   "exclude": ["node_modules", "stories", ".storybook", "dist", "*.test.ts"],
   "compilerOptions": {
     "declaration": true,
-    "emitDeclarationOnly": true,
+    // "emitDeclarationOnly": true,
     "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
     "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. */
     "jsx": "preserve",
@@ -12,13 +14,12 @@
     "skipLibCheck": true /* Skip type checking of declaration files. */,
     "strict": true /* Enable all strict type-checking options. */,
     "target": "es2015", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */
-    "baseUrl": "./src",
+    // "baseUrl": "./src",
     "paths": {
-      "common/*": ["common/*"],
-      "shared/*": ["shared/*"],
-      "components/*": ["components/*"],
-      "hooks/*": ["hooks/*"],
-      "types/*": ["types/*"]
+      "common/*": ["./src/common/*"],
+      "components/*": ["./src/components/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "types/*": ["./src/types/*"]
     }
   }
 }

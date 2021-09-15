@@ -1,10 +1,11 @@
-import './styleDefaults.module.css'
 import * as React from 'react'
 import classnames from 'classnames'
 
-import { colors, typography } from 'common'
-import { DefaultComponentPropI } from 'types/base.types'
-import { toQaId } from 'common/formats'
+import { colors, typography } from '../../common'
+import { DefaultComponentPropI } from '../../types/base.types'
+import { toQaId } from '../../common/formats'
+import MarcomFonts from '../MarcomFonts'
+import RmmFonts from '../RmmFonts'
 
 export interface PropI extends DefaultComponentPropI {}
 
@@ -21,12 +22,18 @@ const StyleDefaults: React.FC<PropI> = (props) => {
       data-qa-id={qaId}
       style={{ height: 0, position: 'absolute' }}
     >
-      <style>{styles}</style>
+      <CssVariables />
+      <MarcomFonts />
+      <RmmFonts />
+      <BaseStyles />
     </div>
   )
 }
 
-const styles = `
+export const CssVariables: React.FC = () => <style className="CssVariables-component">{cssVariables}</style>
+export const BaseStyles: React.FC = () => <style className="BaseStyles-component">{baseStyles}</style>
+
+const cssVariables = `
 :root {
   --animDuration: 0.3s;
   --animEase: ease-out;
@@ -99,14 +106,15 @@ const styles = `
 
   --ff-text: "SF Pro Text", sans-serif;
   --ff-display: "SF Pro Display", sans-serif;
-
-  /* Spacing */
+    /* Spacing */
   --form-horizontal-spacing: 15px;
   --form-vertical-spacing: 18px;
   --content-horizontal-spacing: 20px;
   --content-vertical-spacing: 24px;
 }
+`
 
+const baseStyles = `
 * {
   color: inherit;
   font-family: inherit;

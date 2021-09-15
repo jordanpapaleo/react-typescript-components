@@ -1,12 +1,14 @@
 import { FontWeightT, FontSizeT } from './typography.types'
 
-export const typography: {
+export interface TypographyT {
   fontWeight: FontWeightT
   fontSize: FontSizeT
   fontFamilyText: string[]
   fontFamilyDisplay: string[]
   standardLineHeight: number
-} = {
+}
+
+export const typography: TypographyT = {
   fontWeight: {
     bold: 700,
     medium: 500,

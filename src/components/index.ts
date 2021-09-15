@@ -1,2 +1,6 @@
+export { BaseStyles, CssVariables } from './StyleDefaults'
 export { default as Button } from './Button'
+export { default as Icon } from './Icon'
+export { default as MarcomFonts } from './MarcomFonts'
+export { default as RmmFonts } from './RmmFonts'
 export { default as StyleDefaults } from './StyleDefaults'

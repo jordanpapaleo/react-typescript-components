@@ -8,13 +8,7 @@ import notes from './<%= h.changeCase.camel(name) %>.md'
 export default {
   title: 'Components/<%= name %>',
   component: <%= name %>,
-  parameters: {
-    docs: {
-      description: {
-        component: notes,
-      },
-    },
-  },
+  parameters: { docs: { description: { component: notes } } },
   argTypes: {}
 }
 

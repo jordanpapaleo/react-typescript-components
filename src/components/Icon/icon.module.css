@@ -1,0 +1,21 @@
+.iconComponent {
+  display: inline;
+  font-size: var(--fs-17);
+  font-style: normal;
+  line-height: 1;
+}
+
+.backgroundColor {
+  background-color: var(--icon-color);
+}
+
+.color,
+.color:before {
+  color: var(--icon-color);
+}
+
+.mask {
+  display: inline-block;
+  -webkit-mask: var(--icon-mask-url) no-repeat center / contain;
+  mask: var(--icon-mask-url) no-repeat center / contain;
+}

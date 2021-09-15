@@ -1,3 +1,3 @@
-export * as components from 'components'
-export * as hooks from 'hooks'
-export * as common from 'common'
+export * as components from './components'
+export * as hooks from './hooks'
+export * as common from './common'
