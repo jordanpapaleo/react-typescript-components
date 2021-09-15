@@ -33,8 +33,8 @@ Run `yarn link` in this repository.  The result of this command will have a comm
 - [x] styled-jsx or a css module port
 - [x] yarn pack —out rmm-ocm-package.tgz
 - [x] how to get css variables into the project
-- [ ] Icons
-- [ ] GH pages for story book
+- [x] Icons
+- [x] GH pages for story book
 - [ ] setup apple npm stuff
 - [ ] Verify preversion version stuff
 - [ ] setup publish flow
