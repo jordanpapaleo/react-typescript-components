@@ -1,0 +1,7 @@
+.bullet {
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    line-height: 1;
+    width: 8px;
+}
