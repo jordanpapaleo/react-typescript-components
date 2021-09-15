@@ -35,16 +35,15 @@ Run `yarn link` in this repository.  The result of this command will have a comm
 - [x] how to get css variables into the project
 - [x] Icons
 - [x] GH pages for story book
-- [ ] setup apple npm stuff
 - [ ] Verify preversion version stuff
 - [ ] setup publish flow
+- [ ] setup apple npm stuff
 
 ```
 yarn login
 yarn build
 yarn publish
 ```
-
 
 ## TypeScript Notes
 
