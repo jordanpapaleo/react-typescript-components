@@ -1,0 +1,152 @@
+.calendar {
+  background-color: var(--white);
+  border-radius: 4px;
+  border: 1px solid var(--borderLightColor);
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px var(--shadow);
+  display: block;
+  height: auto;
+  width: 260px;
+  max-width: 260px;
+  overflow: hidden;
+  padding: 15px 18px;
+}
+
+.calendarLabel {
+  font-size: var(--fs-17);
+  font-weight: var(--fw-semiBold);
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer {
+  font-size: var(--fs-12);
+  font-weight: var(--fw-bold);
+  line-height: 30px;
+  text-align: center;
+}
+
+.footerButton {
+  color: var(--linkColor);
+}
+
+.dayNames {
+  color: var(--headingLightestColor);
+  display: grid;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-bold);
+  grid-template-columns: repeat(7, 1fr);
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.days {
+  border-top: 1px solid var(--borderLightColor);
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.day {
+  background-color: var(--white);
+  box-sizing: border-box;
+  color: var(--copyColor);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-regular);
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.dayPassive {
+  color: var(--copyLightColor);
+}
+
+/* day buttons */
+.dayButton {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.dayToday .day-ui {
+  border: 1px solid var(--brandColor);
+}
+
+.dayUi {
+  border-radius: 50%;
+  bottom: 4px;
+  left: 4px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all var(--animDuration) var(--animEase);
+  z-index: 1;
+}
+
+.day:hover .day-ui {
+  background-color: var(--brand30Color);
+  border-color: var(--brand30Color);
+}
+
+.day:hover .day-button {
+  color: var(--linkColor);
+}
+
+/* Disabled */
+.dayDisabled:hover .day-button {
+  color: var(--copyWhiteColor);
+  cursor: default;
+}
+
+/* Disabled */
+.dayDisabled {
+  background-color: var(--backgroundDarkColor);
+  cursor: default;
+}
+
+.dayDisabled .day-button {
+  color: var(--copyLight);
+  cursor: default;
+}
+
+.dayDisabled:hover .day-button {
+  color: var(--copyLight);
+  cursor: default;
+}
+
+.dayPassive:hover .day-ui,
+.dayDisabled:hover .day-ui {
+  background: var(--transparent);
+}
+
+/* Selected */
+.daySelected {
+  color: var(--copyWhiteColor);
+}
+
+.daySelected:hover .day-ui,
+.daySelected .day-ui {
+  background-color: var(--brandColor);
+}
+
+.daySelected:hover .day-button {
+  color: var(--copyWhiteColor);
+}
