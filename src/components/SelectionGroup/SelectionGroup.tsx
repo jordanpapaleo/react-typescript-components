@@ -4,11 +4,11 @@ import get from 'lodash/get'
 
 import { DefaultComponentPropI } from '../../types/base.types'
 import { toQaId } from '../../common/formats'
-import styles from './selectionGroup.module.css'
+// import styles from './selectionGroup.module.css'
 import RadioButton from './RadioButton'
 import Checkbox from './Checkbox'
-import Notification from 'components/Notification'
-import FormLabel from 'components/FormLabel'
+import Notification from '../Notification'
+import FormLabel from '../FormLabel'
 
 export interface PropI extends DefaultComponentPropI {
   error?: boolean | string
@@ -41,7 +41,7 @@ const SelectionGroup: React.FC<PropI> = (props) => {
     setValue(valueProp)
   }, [valueProp])
 
-  function handleChange(se) {
+  function handleChange(se: React.SyntheticEvent) {
     const nextValue = get(se, 'target.value')
     let derivedValue
 
@@ -72,8 +72,8 @@ const SelectionGroup: React.FC<PropI> = (props) => {
         <FormLabel
           label={label}
           labelAux={labelAux}
-          variant={error && 'error'}
-        />
+          variant={error ? 'error' : undefined}
+          />
       )}
 
       <div
@@ -82,19 +82,24 @@ const SelectionGroup: React.FC<PropI> = (props) => {
         })}
       >
         {React.Children.map(children, (child) => {
+          // @ts-ignore
           if (child.type === RadioButton || child.type === Checkbox) {
             const p = {
               name,
               onChange: handleChange,
+              // @ts-ignore
               ...child.props,
             }
 
             if (value instanceof Array) {
+              // @ts-ignore
               p.checked = value.includes(child.props.value)
             } else {
+              // @ts-ignore
               p.checked = value === child.props.value
             }
 
+            // @ts-ignore
             return React.cloneElement(child, p)
           }
         })}

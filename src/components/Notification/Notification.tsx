@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import { DefaultComponentPropI } from '../../types/base.types'
 import { toQaId } from '../../common/formats'
-import styles from './notification.module.css'
+// import styles from './notification.module.css'
 import Icon from 'components/Icon'
 import { colors } from 'common/colors'
 

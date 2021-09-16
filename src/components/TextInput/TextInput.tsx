@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import { DefaultComponentPropI } from '../../types/base.types'
 import { toQaId } from '../../common/formats'
-import styles from './textInput.module.css'
+// import styles from './textInput.module.css'
 import FormLabel from 'components/FormLabel'
 import Notification from 'components/Notification'
 
@@ -43,7 +43,7 @@ const TextInput: React.FC<PropI> = (props) => {
   const qaId = toQaId({ parentId: dataQaId, componentId: 'TextInput' })
   const [focused, setFocused] = React.useState(false)
 
-  function handleFocus(se) {
+  function handleFocus(se: React.SyntheticEvent) {
     setFocused(true)
 
     if (onFocus) {
@@ -51,7 +51,7 @@ const TextInput: React.FC<PropI> = (props) => {
     }
   }
 
-  function handleBlur(se) {
+  function handleBlur(se: React.SyntheticEvent) {
     setFocused(false)
 
     if (onBlur) {
@@ -59,7 +59,7 @@ const TextInput: React.FC<PropI> = (props) => {
     }
   }
 
-  function handleChange(se) {
+  function handleChange(se: React.SyntheticEvent) {
     if (onChange) {
       onChange(se)
     }

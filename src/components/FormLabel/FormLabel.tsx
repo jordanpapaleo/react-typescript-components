@@ -8,7 +8,7 @@ import styles from './formLabel.module.css'
 export interface PropI extends DefaultComponentPropI {
   label?: string | React.ReactNode
   labelAux?: string | React.ReactNode
-  variant?: 'success' | 'warning' | 'info' | 'error' | 'default' | false
+  variant?: 'success' | 'warning' | 'info' | 'error' | 'default'
 }
 
 const FormLabel: React.FC<PropI> = (props) => {
@@ -30,14 +30,15 @@ const FormLabel: React.FC<PropI> = (props) => {
     >
       <span style={{ flexGrow: 1, display: 'inlineBlock', minHeight: 14 }}>
         {typeof label === 'string' && (label || label === '') && label}
+         {/* @ts-ignore */}
         {React.isValidElement(label) &&
           React.cloneElement(label, { 'data-qa-id': qaId, variant })}
       </span>
 
       <span>
-        {typeof labelAux === 'string' &&
-          (labelAux || labelAux === '') &&
-          labelAux}
+        {typeof labelAux === 'string' && (labelAux || labelAux === '') && labelAux}
+
+        {/* @ts-ignore */}
         {React.isValidElement(labelAux) &&
           React.cloneElement(labelAux, { 'data-qa-id': qaId, variant })}
       </span>

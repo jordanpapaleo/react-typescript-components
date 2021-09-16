@@ -1,14 +1,16 @@
 import * as React from 'react'
 import classnames from 'classnames'
+import get from 'lodash/get'
 
 import { DefaultComponentPropI, InputI } from '../../types/base.types'
 import { toQaId } from '../../common/formats'
-import styles from './selectionGroup.module.css'
+// import styles from './selectionGroup.module.css'
 import Notification from 'components/Notification'
 
 export interface PropI extends DefaultComponentPropI, InputI {
   checked?: boolean
   value?: string | number
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 const Checkbox: React.FC<PropI> = (props) => {
@@ -49,22 +51,26 @@ const Checkbox: React.FC<PropI> = (props) => {
           type="checkbox"
           value={value}
         />
-        {isCustom ? (
-          React.Children.map(children, (child) => {
-            return React.cloneElement(child, {
-              checked,
-              disabled,
-              name,
-              className: classnames(get(child, 'props.className', ''), {
-                checked,
-                disabled,
-              }),
-              ...child.props,
-            })
-          })
-        ) : (
+        {isCustom
+          ? (
+              React.Children.map(children, (child) => {
+                // @ts-ignore
+                return React.cloneElement(child, {
+                  checked,
+                  disabled,
+                  name,
+                  className: classnames(get(child, 'props.className', ''), {
+                    checked,
+                    disabled,
+                  }),
+                  // @ts-ignore
+                  ...child.props,
+                })
+              })
+            )
+          : (
           <span className="form-choice-label">{label}</span>
-        )}
+            )}
       </div>
 
       {error && typeof error === 'string' && (

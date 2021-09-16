@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import { DefaultComponentPropI } from '../../types/base.types'
 import { toQaId } from '../../common/formats'
-import styles from './sortable.module.css'
+// import styles from './sortable.module.css'
 
 export interface PropI extends DefaultComponentPropI {}
 

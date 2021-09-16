@@ -1,5 +1,7 @@
 import React from 'react'
-import SelectionGroup, { RadioButton, Checkbox } from './SelectionGroup'
+import SelectionGroup from './SelectionGroup'
+import RadioButton from './RadioButton'
+import Checkbox from './Checkbox'
 import notes from './selectionGroup.md'
 
 export default {

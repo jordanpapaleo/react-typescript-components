@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import { DefaultComponentPropI } from '../../types/base.types'
 import { toQaId } from '../../common/formats'
-import styles from './editableText.module.css'
+// import styles from './editableText.module.css'
 
 export interface PropI extends DefaultComponentPropI {}
 

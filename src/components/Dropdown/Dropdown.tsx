@@ -1,12 +1,12 @@
 import * as React from 'react'
 import classnames from 'classnames'
 
-import { colors } from 'common/colors'
+// import { colors } from 'common/colors'
+// import styles from './dropdown.module.css'
 import { DefaultComponentPropI } from '../../types/base.types'
 import { toQaId } from '../../common/formats'
 import FormLabel from 'components/FormLabel'
 import Notification from 'components/Notification'
-import styles from './dropdown.module.css'
 
 export interface PropI extends DefaultComponentPropI {
   disabled?: boolean
@@ -60,7 +60,7 @@ const Dropdown: React.FC<PropI> = (props) => {
         <FormLabel
           label={label}
           labelAux={labelAux}
-          variant={error && 'error'}
+          variant={error ? 'error' : undefined}
         />
       )}
 
