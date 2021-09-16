@@ -1,7 +1,7 @@
 const esbuild = require('esbuild')
 const cssModulesPlugin = require('esbuild-css-modules-plugin')
 const fs = require('fs-extra')
-const isProd = false
+const isProd = process.env.NODE_ENV === 'production'
 
 const defaultConfig = {
   entryPoints: ['src/index.ts'],
