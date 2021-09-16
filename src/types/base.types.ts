@@ -51,9 +51,9 @@ export interface FormValidationI {
   valid: boolean
 }
 
-export type RenderOverrideT = string | React.ReactNode
+export type RenderOverrideT = (arg: any) => React.ReactNode
 export interface RenderOverrideMapI {
-  [key: string]: RenderOverrideT | React.ComponentType
+  [key: string]: RenderOverrideT
 }
 
 export interface InputI {
