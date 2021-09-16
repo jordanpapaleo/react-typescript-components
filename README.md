@@ -10,6 +10,7 @@ yarn && yarn start
 You will notice that the start command actually starts storybook.  This is intentional as there is not a web application associated to this repo.
 
 ### Creating new content
+
 We use hygen template to create all of our content for consistency.  Doing this will scaffold your work and ensure the new content is apart of the build.  It is highly recommended that you build content this way.
 
 - `yarn new:common` creates a service in the common directory

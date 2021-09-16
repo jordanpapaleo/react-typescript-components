@@ -1,0 +1,25 @@
+.formLabel {
+  align-items: center;
+  display: flex;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-regular);
+  justify-content: space-between;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.success {
+  color: var(--successColor);
+}
+
+.warning {
+  color: var(--warningColor);
+}
+
+.info {
+  color: var(--infoColor);
+}
+
+.error {
+  color: var(--errorColor);
+}

@@ -31,6 +31,7 @@ module.exports = {
     'object-property-newline': 'off',
     'quote-props': 'off',
     quotes: ['error', 'single'],
+    'react/prop-types': 0,
     'react-hooks/exhaustive-deps': 0,
     'space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
   },

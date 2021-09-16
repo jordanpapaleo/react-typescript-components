@@ -1,0 +1,32 @@
+.Notification-component {
+  align-items: flex-start;
+  color: var(--defaultColor);
+  display: flex;
+  flex-direction: row;
+  font-size: var(--fs-14);
+  justify-content: flex-start;
+  line-height: 1;
+  margin-top: 5px;
+}
+
+:global(.Notification-component .Icon-component) {
+  font-size: var(--fs-14);
+  margin-right: 5px;
+}
+
+.Notification-component.success {
+  color: var(--successColor);
+}
+
+.Notification-component.warning {
+  color: var(--warningColor);
+}
+
+.Notification-component.info {
+  color: var(--infoColor);
+}
+
+.Notification-component.error {
+  color: var(--errorColor);
+  background-color: var(--errorBackground);
+}

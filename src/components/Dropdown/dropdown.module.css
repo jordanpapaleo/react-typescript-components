@@ -1,0 +1,55 @@
+label {
+  display: block;
+  position: relative;
+}
+
+label.error select {
+  /* background-color: ${colors.formInput.errorBackground}; */
+  border-color: var(--errorColor);
+  color: var(--errorColor);
+}
+
+label.disabled select {
+  /* background-color: ${colors.formInput.disabledBackground}; */
+  /* border-color: ${colors.formInput.disabledBorder}; */
+}
+
+span {
+  background-color: var(--transparent);
+  color: var(--iconColor);
+  font-family: 'Apple Icons';
+  font-size: var(--fs-22);
+  margin-right: 7px;
+  position: absolute;
+  right: 9px;
+}
+
+.error span {
+  color: var(--errorColor);
+}
+
+.Dropdown-component select {
+  letter-spacing: -0.022em;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--borderColor);
+  color: var(--copyColor);
+  height: 36px;
+  letter-spacing: 0em;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+  text-rendering: auto;
+  width: 100%;
+}
+
+.Dropdown-component select:focus {
+  border-color: var(--focusBorder);
+  box-shadow: 0 0 0 3px var(--brand30Color);
+  outline: 0;
+}

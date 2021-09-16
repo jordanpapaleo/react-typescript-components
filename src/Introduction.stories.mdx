@@ -17,13 +17,24 @@ import { Meta } from '@storybook/addon-docs'
 
 # RMM and OCM component library
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+This project is built using css-modules, react, typescript, and esbuild.
+
+There is a CSS file required to use the icons and get the fonts:
+
+```javascript
+
+```
 
 Browse stories now by navigating to them in the sidebar.
 View their code in `*.stories.js` files to learn how they work.
 We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
 
-<div className="subheading">Configure</div>
+## Creating new content
 
-## TODO
+We use hygen template to create all of our content for consistency. Doing this will scaffold your work and ensure the new content is apart of the build. It is highly recommended that you build content this way.
+
+- `yarn new:common` creates a service in the common directory
+- `yarn new:component` creates a new component in the component directory
+- `yarn new:hook` creates a new hook in the hook directory
+
+<div className="subheading">Configure</div>

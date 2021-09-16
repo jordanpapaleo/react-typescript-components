@@ -1,0 +1,152 @@
+.SelectionGroup-component-selections {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.SelectionGroup-component-selections.inline {
+  flex-direction: row;
+}
+
+:global(.SelectionGroup-component-selections.inline > *) {
+  margin-right: var(--form-horizontal-spacing);
+}
+
+:global(.SelectionGroup-component .RadioButton-component),
+:global(.SelectionGroup-component .Checkbox-component) {
+  flex-grow: 1;
+}
+
+/* RADIO */
+div {
+  align-items: center;
+  display: inline-flex;
+  cursor: pointer;
+  flex-direction: row;
+  user-select: none;
+  position: relative;
+  line-height: 1;
+}
+
+input {
+  cursor: pointer;
+  display: none;
+}
+
+.form-choice-indicator {
+  background: var(--backgroundLightColor);
+  border-radius: 50%;
+  border: 1px solid var(--borderColor);
+  display: inline-block;
+  height: 14px;
+  margin-right: 10px;
+  width: 14px;
+}
+
+.checked .form-choice-indicator {
+  /* border: 6px solid ${colors.formInput.checkboxCheckedBackground}; */
+  height: 4px;
+  width: 4px;
+}
+
+.disabled {
+  cursor: default;
+  /* color: ${colors.formInput.disabledColor}; */
+  /* border-color: ${colors.formInput.disabledBorder}; */
+}
+
+.checked.disabled .form-choice-indicator {
+  /* border-color: ${colors.formInput.checkboxDisabledCheckedBorder}; */
+}
+
+.error .form-choice-indicator {
+  /* border-color: ${colors.formInput.errorBorder}; */
+  /* background-color: ${colors.formInput.errorBackground} */
+}
+
+.error .form-choice-label {
+  /* color: ${colors.formInput.errorColor}; */
+}
+
+.checked.error .form-choice-indicator {
+  /* border-color: ${colors.formInput.errorBorder}; */
+}
+
+.hidden .form-choice-indicator {
+  display: none;
+}
+
+/* CHECKBOX */
+div {
+  align-items: center;
+  display: inline-flex;
+  cursor: pointer;
+  flex-direction: row;
+  user-select: none;
+  position: relative;
+  line-height: 1;
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--backgroundLightColor);
+  border-radius: 3px;
+  border: 1px solid var(--borderColor);
+  cursor: pointer;
+  margin-right: 10px;
+  outline: none !important;
+  padding: 7px;
+  position: relative;
+}
+
+.checked input {
+  /* background-color: ${colors.formInput.checkboxCheckedBackground};
+  border-color: ${colors.formInput.checkboxCheckedBorder};
+  color: ${colors.formInput.checkboxColor}; */
+}
+
+.checked input:after {
+  /* color: ${colors.formInput.checkboxColor}; */
+  content: '\2713';
+  font-size: 10px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+}
+
+.disabled,
+.disabled * {
+  cursor: default;
+  /* color: ${colors.formInput.disabledColor}; */
+}
+
+.hidden input {
+  display: none;
+}
+
+.checked.disabled input {
+  /* background-color: ${colors.formInput.checkboxDisabledCheckedBackground}; */
+  /* border-color: ${colors.formInput.checkboxDisabledCheckedBorder}; */
+  cursor: default;
+}
+
+.error .form-choice-indicator {
+  /* border-color: ${colors.formInput.errorBorder}; */
+  /* background-color: ${colors.formInput.errorBackground} */
+}
+
+.error input,
+.error .form-choice-label {
+  /* color: ${colors.formInput.errorColor}; */
+  /* border-color: ${colors.formInput.errorBorder}; */
+}
+
+.checked.error input {
+  /* background-color: ${colors.formInput.errorBackground};
+  border-color: ${colors.formInput.errorBorder};
+  color: ${colors.formInput.checkboxColor}; */
+}
+
+.checked.error input:after {
+  /* color: ${colors.formInput.errorBorder}; */
+}
