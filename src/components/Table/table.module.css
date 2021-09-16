@@ -1,0 +1,13 @@
+:global(.table thead th),
+:global(.table thead th a),
+:global(.table thead th a *) {
+  border: none;
+  color: var(--copyDarkColor);
+  font-weight: var(--fw-bold);
+  vertical-align: middle;
+}
+
+:global(.table tr) {
+  border: none;
+  border-bottom: 1px solid var(--borderLightColor);
+}
