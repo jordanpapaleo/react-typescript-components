@@ -12,7 +12,11 @@ export default {
 
 const sharedGridStyles = { display: 'grid', gridTemplateColumns: '80px auto' }
 const sharedIconStyles = { width: 15, height: 15 }
-const sharedDlStyles = { display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }
+const sharedDlStyles = {
+  display: 'grid',
+  gridGap: 10,
+  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+}
 
 export const Docs = () => <div />
 
@@ -36,7 +40,6 @@ export const MarcomFonts = () => (
         </div>
       ))}
     </dl>
-
   </div>
 )
 
@@ -46,7 +49,17 @@ export const RmmFonts = () => (
     <Icon type="avatar" color="red" />
     <Icon type="avatar" color="blue" />
     <Icon type="avatar" color="hotpink" style={{ backgroundColor: 'black' }} />
-    <Icon type="avatar" style={{ border: '1px solid black', borderRadius: '50%', padding: 5, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }} />
+    <Icon
+      type="avatar"
+      style={{
+        border: '1px solid black',
+        borderRadius: '50%',
+        padding: 5,
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    />
 
     <hr />
 
@@ -67,7 +80,9 @@ export const RmmFonts = () => (
 
 export const ImageMasks = () => (
   <div>
-    <h2>You have to explicitly use the style tag to set the width and height</h2>
+    <h2>
+      You have to explicitly use the style tag to set the width and height
+    </h2>
     <p>Uses the type property and renders the image using the </p>
     <Icon mask="daily" color="red" style={sharedIconStyles} />
     <Icon mask="daily" color="orange" style={sharedIconStyles} />
@@ -89,7 +104,10 @@ export const ImageMasks = () => (
 
 export const SvgMarkup = () => (
   <div>
-    <p>This renders the svg DOM markup into the page from the file.  This is not a cached image.</p>
+    <p>
+      This renders the svg DOM markup into the page from the file. This is not a
+      cached image.
+    </p>
 
     <Icon svg="demodevices" color="hotpink" />
 
@@ -110,12 +128,18 @@ export const SvgMarkup = () => (
 
 export const ImageSource = () => (
   <div>
-    <p>This provides you an image using the named svg as the source. You are not able to change to color of an image src.</p>
+    <p>
+      This provides you an image using the named svg as the source. You are not
+      able to change to color of an image src.
+    </p>
 
     <Icon image="demodevices" style={{ width: 50 }} />
     <Icon image="demodevices" />
     <Icon image="demodevices" />
-    <Icon image="demodevices" style={{ border: '1px solid black', padding: 3 }} />
+    <Icon
+      image="demodevices"
+      style={{ border: '1px solid black', padding: 3 }}
+    />
 
     <hr />
 

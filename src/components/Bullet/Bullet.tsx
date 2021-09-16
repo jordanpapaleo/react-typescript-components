@@ -6,7 +6,7 @@ import { toQaId } from '../../common/formats'
 import styles from './bullet.module.css'
 
 export interface PropI extends DefaultComponentPropI {
-  color: string,
+  color: string
 }
 
 const Bullet: React.FC<PropI> = (props) => {

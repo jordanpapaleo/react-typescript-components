@@ -18,5 +18,5 @@ export default {
 export const useTheForceExample = () => {
   const hook = useTheForce()
   console.log(hook)
-  return (<div></div>)
+  return <div></div>
 }

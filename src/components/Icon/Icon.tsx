@@ -10,16 +10,22 @@ import { IMAGES, MARCOM_ARR, RMM_ARR, RMM_ARR_T, MARCOM_ARR_T } from './icons'
 export type ImagesT = keyof typeof IMAGES
 
 export interface PropI extends DefaultComponentPropI {
-  color?: string,
-  image?: ImagesT,
-  mask?: ImagesT,
-  svg?: ImagesT,
-  type?: MARCOM_ARR_T | RMM_ARR_T,
+  color?: string
+  image?: ImagesT
+  mask?: ImagesT
+  svg?: ImagesT
+  type?: MARCOM_ARR_T | RMM_ARR_T
 }
 
-interface TypeIconPropI extends PropI { type: RMM_ARR_T | MARCOM_ARR_T }
-interface MaskIconPropI extends PropI { mask: ImagesT }
-interface ImageIconPropI extends PropI { src: string }
+interface TypeIconPropI extends PropI {
+  type: RMM_ARR_T | MARCOM_ARR_T
+}
+interface MaskIconPropI extends PropI {
+  mask: ImagesT
+}
+interface ImageIconPropI extends PropI {
+  src: string
+}
 
 const ICON_COLOR = '--icon-color'
 const ICON_MASK_URL = '--icon-mask-url'
@@ -139,7 +145,11 @@ const Icon: React.FC<PropI> = (props) => {
   } = props
 
   const qaId = toQaId({ parentId: dataQaId, componentId: 'Icon' })
-  const classname = classnames('Icon-component', className, styles.iconComponent)
+  const classname = classnames(
+    'Icon-component',
+    className,
+    styles.iconComponent,
+  )
 
   if (type) {
     // @ts-ignore
@@ -148,41 +158,51 @@ const Icon: React.FC<PropI> = (props) => {
     const isMarcomFont = MARCOM_ARR.includes(type)
 
     if (isMarcomFont) {
-      return <MarcomFontIcon
-        className={classname}
-        data-qa-id={qaId}
-        type={type}
-        {...otherProps}
-      />
+      return (
+        <MarcomFontIcon
+          className={classname}
+          data-qa-id={qaId}
+          type={type}
+          {...otherProps}
+        />
+      )
     } else if (isRmmFont) {
-      return <RmmFontIcon
-        className={classname}
-        data-qa-id={qaId}
-        type={type}
-        {...otherProps}
-      />
+      return (
+        <RmmFontIcon
+          className={classname}
+          data-qa-id={qaId}
+          type={type}
+          {...otherProps}
+        />
+      )
     }
   } else if (mask) {
-    return <MaskIcon
-      className={className}
-      data-qa-id={qaId}
-      mask={IMAGES[mask]}
-      {...otherProps}
-    />
+    return (
+      <MaskIcon
+        className={className}
+        data-qa-id={qaId}
+        mask={IMAGES[mask]}
+        {...otherProps}
+      />
+    )
   } else if (svg) {
-    return <SvgIcon
-      className={classname}
-      data-qa-id={qaId}
-      src={IMAGES[svg]}
-      {...otherProps}
-    />
+    return (
+      <SvgIcon
+        className={classname}
+        data-qa-id={qaId}
+        src={IMAGES[svg]}
+        {...otherProps}
+      />
+    )
   } else if (image) {
-    return <ImageIcon
-      className={classname}
-      data-qa-id={qaId}
-      src={IMAGES[image]}
-      {...otherProps}
-    />
+    return (
+      <ImageIcon
+        className={classname}
+        data-qa-id={qaId}
+        src={IMAGES[image]}
+        {...otherProps}
+      />
+    )
   } else {
     console.log('Icon not found')
     return null

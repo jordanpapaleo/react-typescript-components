@@ -25,7 +25,7 @@ const ColorList = ({ hash, label }: { hash: ColorHashI, label?: string }) => (
         <div key={name} style={{ display: 'flex', marginBottom: 5 }}>
           {hex instanceof Object
             ? (
-            <ColorList hash={hex} label={label ? `${label}-${name}` : name} />
+              <ColorList hash={hex} label={label ? `${label}-${name}` : name} />
               )
             : (
             <>
